@@ -176,7 +176,7 @@ describe('6. Contact Us Form', () => {
       cy.get('[data-qa="email"]').type('Brokolis@testas.test.ts');
       cy.get('[data-qa="subject"]').type('Kreipinys');
       cy.get('[data-qa="message"]').type('Kreipiuosi testuodama. Kaip diena ir naktis');
-      //ne iki galo atlikta, nes nėra failo įkėlimo, nežinau kaip padaryti, reikės pagalbos.
+      cy.get('input[type="file"]').attachFile('testinisFailas.txt');
       cy.get('[data-qa="submit-button"]').click();
       cy.on('window:confirm', (text) => {
           expect(text).to.equal('Press OK to proceed!'); // Patikrina tekstą
