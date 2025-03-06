@@ -1,13 +1,19 @@
 # Baigiamasis Darbas
 
 ## Overview
-This project is a final work repository that showcases the implementation of various functionalities using modern web technologies.
+This project is a final work repository that showcases automated testing and implementation of various functionalities using modern web technologies.
 
 ## Technologies Used
 
 - **JavaScript** – The main programming language used in the project.  
 - **Cypress** – Used for end-to-end testing.  
-- **Node.js** – Used as the runtime environment for JavaScript.  
+- **Node.js** – Used as the runtime environment for JavaScript.
+
+
+### Node.js Versions Used in Automation Pipeline
+The automation testing pipeline uses the following versions of Node.js:
+- **Node.js 22.x**
+
 
 ## Installation
 
