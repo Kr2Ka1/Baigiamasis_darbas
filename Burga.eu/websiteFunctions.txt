@@ -3,12 +3,30 @@ Test website: https://eu.burga.com/
 1 Home Page
 
     1.1 Verify the home page loads successfully.
+        1.1.1 Banner ads and blocks for different product categories are visible 
     1.2 Ensure product information is visible.
+        1.2.1 Title of product is visible
+        1.2.2 Which phone model the product is for is visible
+        1.2.3 Price is visible
+        1.2.4 Add to cart is visible
     1.3 Confirm navigation menus are accessible.
-    1.4 Change the region is visible and accessible
-    1.5 Select brad and model to displaying search products information
-    1.6 Notification of offers and discounts
-    1.7 Access to account
+        1.3.1 Navigation menu is visible and opens when clicked
+    1.4 Search button is visible
+        1.4.1 When pressed, opens a modal window for searching.
+    1.5 Change the region is visible and accessible
+        1.5.1 Pops up window to change region
+        1.5.2 Selection of region is visible and accessible
+        1.5.3 Visible buttons for posibility to change region or stay in already selected region
+    1.6 Select brad and model to displaying search products information
+        1.6.1 When pressed opens a modal window to search phone models.
+        1.6.2 The list of brands and models is visible.
+    1.7 Notification of offers and discounts
+        1.7.1 When pressed opens a modal window that shows latest offers.
+    1.8 Access to account
+        1.8.1 When pressed redirects to the correct login/registration page
+    1.9 Cart button
+        1.9.1 When pressed opens a modal window that shows what is in the cart
+    1.10 Does the main logo redirects to the home page when clicked
 
 2. Product Categories
 
@@ -28,13 +46,24 @@ Test website: https://eu.burga.com/
         2.1.13 Other Accessories
     2.2 Verify products are displayed under each category.
     2.3 Check filtering and sorting options within categories.
+        2.3.1 Check if filtering is taking place according to the selected filtering criteria
 
 3. Product Details Page
 
     3.1 Ensure product images are displayed.
-    3.2 Verify product descriptions and specifications.
+        3.1.1 Verify image of the selected item in the main part of the screen
+        3.1.2 Verify that you can change the images by selecting one of the other pictures of the same item
+        3.1.3 Check that you can change the images by selecting one of the other images of the same item from the radio buttons at the bottom of the photo. 
+    3.2 Verify product descriptions and specifications are visible.
+        3.2.1 Verify the type of product is visible and you can change it
+        3.2.2 Verify the price of product is visible
+        3.2.3 Verify that you can see which model the product is for
+        3.2.4 Verify that you can see Description
+        3.2.5 Verify that you can see FAQ
     3.3 Check availability 
+        3.3.1 Verify that product can be added to cart
     3.4 Check customer reviews and ratings.
+        3.4.1 Verify that ustomer reviews and ratings are visible
     3.5 Confirm the presence of an "Add to Cart" button.
 
 4. Search Functionality
@@ -46,10 +75,21 @@ Test website: https://eu.burga.com/
 5. Shopping Cart
 
     5.1 Add products to the cart.
+        5.1.1 Verify that when product added to cart the modal window shows up with success message
     5.2 View items in the cart.
+        5.2.1 Verify that cart is not empty
     5.3 Update product quantities.
+        5.3.1 Verify that product quantities in the cart has changed
     5.4 Remove products from the cart.
+        5.4.1 Verify that product from the cart has been removed
     5.5 Proceed to checkout.
+        5.5.1 When the Secure Checkout button is clicked, a redirection to another window is correct to proceed to checkout.
+        5.5.2 Verify that the products in a cart is visible
+        5.5.3 Verify that the price of the product is visible
+        5.5.4 Check that the discount entry is visible and can be applied.
+        5.5.5 Verify that the delivery information entry form is visible and can be filled
+        5.5.6 Verify that the payment information form is visible and can be filled
+        5.5.7 Verify that whether the purchase can proceed if all fields are not filled in
 
 6. Checkout Process
 
@@ -86,10 +126,10 @@ Test website: https://eu.burga.com/
     9.4 Phone model and brand available to choose
  
 
-Footer Links
+10. Footer Links
 
     10.1 Navigate to "About Us" page.
-    10.2 Read the "Blog" section.
-    10.3 Review "Terms & Conditions".
-    10.4 Understand the "Privacy Policy".
-    10.5 Explore "Partnerships and Collaborations".
+    10.2 Navigate to "Blog" section.
+    10.3 Navigate to "Terms & Conditions".
+    10.4 Navigate to "Privacy Policy".
+    10.5 Navigate to "Partnerships and Collaborations".

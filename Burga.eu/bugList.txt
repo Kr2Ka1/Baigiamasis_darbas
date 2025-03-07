@@ -1,0 +1,16 @@
+1. iš Help center paspaudus logo nenukreipia į home page.
+2.
+
+
+
+
+
+
+
+
+
+
+klausimai: 
+# ar mano test cases tinkamos ar nėra per daug abstraktūs? - reikia kiek pasmulkinti nes kiek per abstraskčiai, 
+turiu nurodyti ką matau atsidariusi pvz tikriu ar home page atsidaro ir ką te matau(koks vaizdas turi matytis). dar smulkinti buletpointus.
+
