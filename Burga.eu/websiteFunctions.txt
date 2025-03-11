@@ -110,19 +110,32 @@ Test website: https://eu.burga.com/
         7.2.2 Enter login information
         7.2.3 Verify success of login
     7.3 View and edit profile information.
+        7.3.1 Verify that profile edit pop up window is visible
+        7.3.2 Enter information 
+        7.3.3 Save information 
     7.4 Access order history.
+        7.4.1 Open Oreder history (should be empty, because 6.3/6.4/6.5)
     7.5 Manage saved addresses.
-    7.6 Change password.
-    7.7 Log out.
+    7.6 Log out.
+    7.7 Check that the password reminder works.
+        7.7.1 Enter right email 
+        7.7.2 Get a renewed password
 
 8. Customer Support
 
     8.1 Access the Help Center.
+        8.1.1 'Get more information' should be visible
     8.2 Contact customer service.
-    8.3 Check is CONTACT & INFO is there and its visible
-    8.4 Does clicking on contact us open a contact form?
-    8.5 Is there Help Center
-    8.6 Can i go to home page from help center just by pressing Burga main logo(left side)
+        8.2.1 Select 'contact us'
+        8.2.2 Verify that 'Costumer support' is visible
+        8.2.3 Verify that 'Invoice' is visible
+        8.2.4 Verify that 'Collaboration & Promotions' is visible
+        8.2.5 Verify that 'Wholesale & Retail' is visible
+    8.3 Does clicking on contact us open a contact form?
+        8.3.1 Pressed on huperlik of contact form should open contact us form
+        8.3.2 Fill form (not send, same as in point 6.3 )
+    8.4 Can i go to home page from help center just by pressing Burga main logo(left side)
+   
 
 9. Meniu bar
 
@@ -134,8 +147,8 @@ Test website: https://eu.burga.com/
 
 10. Footer Links
 
-    10.1 Navigate to "About Us" page.
-    10.2 Navigate to "Blog" section.
-    10.3 Navigate to "Terms & Conditions".
-    10.4 Navigate to "Privacy Policy".
-    10.5 Navigate to "Partnerships and Collaborations".
+    10.1 Navigate to and verify that "About Us" page and information is visible.
+    10.2 Navigate to and verify that"Blog" section page and information is visible.
+    10.3 Navigate to and verify that"Terms & Conditions" page and information is visible.
+    10.4 Navigate to and verify that"Privacy Policy" page and information is visible.
+    10.5 Navigate to and verify that"Partnerships and Collaborations" page and information is visible.
