@@ -28,14 +28,17 @@ describe('Burga.eu Home Page', () => {
     cy.get('.modal-close.sidebar-search-close.global-icon-button.global-icon-button--close.btn-reset').should('be.visible').click();
   });
 
-  it.only('1.4 Change the region is visible and accessible', () => {
-    // cy.get('.ter-toggle.@mobile-tablet__hide.flex.align-center').should('be.visible').click();
+  it('1.4 Change the region is visible and accessible', () => {
+    cy.viewport(1640, 950);
+    cy.get('.ter-toggle').should('be.visible').click();
     cy.get('.ter-select-wrapper.tac.block-rel').should('be.visible');
-    cy.get('.wbsk-ui-option-toggle__input').should('be.visible').click();
+    cy.get('.is-selected > .wbsk-ui-option-toggle__input').click({ force: true });
     cy.get('.wbsk-ui-option-toggle__options-wrap.wbsk-ui-option-toggle__options-wrap--drop-at-mobile.bdr.bdr-grey.wbsk-ui-option-toggle__options-wrap--is-open').should('be.visible');
-    cy.get('input').filter('[value="united-states-usd"]').click();
-    cy.get('.js-ter-select-navigate.btn.btn--green.row--m.block-12/12').should('be.visible').click();
+    cy.get(':nth-child(2) > .wbsk-ui-option-toggle__input').click({ force: true });
+    cy.get('.js-ter-select-navigate').should('contain', 'GO TO STORE').click({ force: true });
   });
+
+
 
 
 
