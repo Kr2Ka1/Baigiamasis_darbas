@@ -30,12 +30,28 @@ describe('Burga.eu Home Page', () => {
 
   it('1.4 Change the region is visible and accessible', () => {
     cy.viewport(1640, 950);
-    cy.get('.ter-toggle').should('be.visible').click();
+    cy.get('.ter-toggle').should('be.visible').and('contain', 'EUR').click();
+    cy.get('.ter-select-wrapper.tac.block-rel').should('be.visible');
+    cy.get('.js-ter-select-close').should('contain', "NO, I'D LIKE TO STAY HERE" ).click();
+    cy.get('.ter-toggle').should('be.visible').and('contain', 'EUR').click();
     cy.get('.ter-select-wrapper.tac.block-rel').should('be.visible');
     cy.get('.is-selected > .wbsk-ui-option-toggle__input').click({ force: true });
     cy.get('.wbsk-ui-option-toggle__options-wrap.wbsk-ui-option-toggle__options-wrap--drop-at-mobile.bdr.bdr-grey.wbsk-ui-option-toggle__options-wrap--is-open').should('be.visible');
     cy.get(':nth-child(2) > .wbsk-ui-option-toggle__input').click({ force: true });
-    cy.get('.js-ter-select-navigate').should('contain', 'GO TO STORE').click({ force: true });
+    cy.get('.js-ter-select-navigate').should('contain', 'GO TO STORE').click();
+    // cy.location('hostname', { timeout: 10000 }).should('include', 'us.burga.com');
+    // cy.origin('https://us.burga.com', () => {
+    //   cy.url().should('include', 'us.burga.com');
+      // cy.get('#united-states-usd').should('be.visible').and('contain', 'USD');
+    // });// neina patikrinti ar sėkminai nusikreipė į kitą puslapį nes cypress meta klaidą, nors kaip ir teisigai rodo,
+    //  kad tikis eu.burga.com, o gauna us.burga.com. 
+  });
+
+  it.only('1.5 Select brad and model to displaying search products information', () => {
+    cy.viewport(1640, 950);
+    cy.get('.mh__model-select.cell-l--s.@mobile-tablet__hide').should('be.visible').click();
+    cy.get('.modal-sidebar').should('contain', 'SELECT MODEL' ).and('be.visible');
+    
   });
 
 
