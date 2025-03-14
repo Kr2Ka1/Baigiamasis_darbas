@@ -42,7 +42,7 @@ describe('5. Shopping Cart', () => {
     cy.get('.flex.row-wrap.align-center.justify-space.block-rel > .t-grey.lh-reset').should('be.visible').and('contain', '1 Item');
   });
 
-  it.only('5.5 Proceed to checkout, without signing in ', () => {
+  it('5.5 Proceed to checkout, without signing in ', () => {
     addProductsToCart();
     cy.get('.js-wbsk-sidebar-cart__open.mh__button.mh__button--cart').should('be.visible').click();
     cy.get('.modal-sidebar').should('be.visible');
@@ -55,9 +55,10 @@ describe('5. Shopping Cart', () => {
     // cy.get('span._7ozb2u1j > p#error-for-ReductionsInput0').should('be.visible').and('contain', 'Enter a valid discount code or gift card');
     cy.get('[id=error-for-ReductionsInput0]').should('be.visible').and('contain', 'Enter a valid discount code or gift card');
     cy.get('#shippingAddressForm').should('be.visible');
-    cy.get('.ZHJU6').should('be.visible').select('LT');
+    // cy.get('.ZHJU6').should('be.visible').select('LT');
+    // cy.get('.ZHJU6').should('be.visible').select('Lithuania').should('have.value', 'LT');//nepavyksta niekaip paselectinti šalies, randa daugiau nei vieną ir neleidžia pasirinkti vieno
 
-
+   
   });
 
-}); 
+});
