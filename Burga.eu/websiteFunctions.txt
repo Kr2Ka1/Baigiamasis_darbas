@@ -142,7 +142,7 @@ Test website: https://eu.burga.com/
     8.4 Can i go to home page from help center just by pressing Burga main logo(left side)
    
 
-9. Meniu bar
+9. Meniu bar // ištestuota 1
 
     9.1 Is Meniu bar visible
     9.2 Collections are visible
