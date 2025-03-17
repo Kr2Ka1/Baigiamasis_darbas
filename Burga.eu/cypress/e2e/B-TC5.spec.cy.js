@@ -52,13 +52,10 @@ describe('5. Shopping Cart', () => {
     cy.get('._1mjy8kn1').should('be.visible').and('not.be.empty');
     cy.get('._19gi7yt0').should('be.visible').and('not.be.empty');
     cy.get('._7ozb2uq').eq(7).should('be.visible').type('Discount{enter}');//neturiu galiojančio nuolaidos kodo negaliu pridėti nuolaidos ir patikrinti ar prisideda.
-    // cy.get('span._7ozb2u1j > p#error-for-ReductionsInput0').should('be.visible').and('contain', 'Enter a valid discount code or gift card');
-    cy.get('[id=error-for-ReductionsInput0]').should('be.visible').and('contain', 'Enter a valid discount code or gift card');
+    cy.get('span._7ozb2u1j > p#error-for-ReductionsInput0').should('be.visible').and('contain', 'Enter a valid discount code or gift card');
+    // cy.get('[id=error-for-ReductionsInput0]').should('be.visible').and('contain', 'Enter a valid discount code or gift card');//ne visada randa pagal id pasilieku abi opcijas
     cy.get('#shippingAddressForm').should('be.visible');
-    // cy.get('.ZHJU6').should('be.visible').select('LT');
-    // cy.get('.ZHJU6').should('be.visible').select('Lithuania').should('have.value', 'LT');//nepavyksta niekaip paselectinti šalies, randa daugiau nei vieną ir neleidžia pasirinkti vieno
-
-   
   });
 
+  
 });

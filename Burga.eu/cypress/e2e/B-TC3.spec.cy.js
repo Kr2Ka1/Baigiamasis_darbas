@@ -15,9 +15,9 @@ describe('3. Product Details Page', () => {
     cy.get('.js-prod-image-gallery__carousel-pagination').should('be.visible');
     cy.get('.js-wbsk-product-form.row.block-rel.d-block').should('be.visible');
     cy.get('.js-prod-accord__title.prod-accord__title.prod-accord__title--design.ct.cb.cell-r').should('be.visible').click();//po click neužsikrauna puslapis.
-    cy.get('.js-prod-sticky.prod-content--sticky.block-12/12').should('be.visible').and('contain', 'Description');
+    cy.get('.js-prod-sticky.prod-content--sticky.block-12/12').should('be.visible').and('contain', 'Description');//3.2.
     // cy.get('.js-product-phone-model-selector.btn-reset.wbsk-ui-option-toggle.proxy-selector').should('be.visible').click();
-    // cy.get('.modal-sidebar').should('be.visible');
+    // cy.get('.modal-sidebar').should('be.visible');//
     // cy.get('.js-model-selector-search.reset-input.sidebar-search__input.sidebar-search__input--icon-left').type('iphone 13 mini{enter}');
     // // cy.wait(10000);// nepadeda
     // cy.get('[data-item="iPhone 13 Mini"]').should('be.visible').click(); //- kažkodėl neveikia, rast rada bet nepavyksta paspausti su cypress
