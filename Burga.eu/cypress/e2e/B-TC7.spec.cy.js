@@ -1,5 +1,3 @@
-const { it } = require("node:test");
-
 describe('7. User Account', () => {
   beforeEach(() => {
     cy.visit('https://eu.burga.com/');
@@ -71,15 +69,29 @@ describe('7. User Account', () => {
     cy.get('h1.h-style.h-l.f-w500.row').should('be.visible').and('contain', 'WELCOME BACK');
   });
 
-  // it.only('Try to login with wrong info', () => {
-  //   cy.get('.js-mh__account-link').should('be.visible').click();
-  //   cy.get('.h-style.h-m.row.f-w500').should('contain', 'CREATE AN ACCOUNT').and('be.visible');
-  //   cy.get('h1.h-style.h-l.f-w500.row').should('be.visible').and('contain', 'WELCOME BACK');
-  //   cy.get('#customer_login > .block-r > .btn').should('be.visible').and('contain', 'LOG IN').click();
-  //   // cy.on('window:alert', (text) => {
-  //   //   expect(text).to.equal('Please fill in this field.');
-  //   // });
-  // });
+  it('7.9 Try to login with no info', () => {
+    cy.get('.js-mh__account-link').should('be.visible').click();
+    cy.get('.h-style.h-m.row.f-w500').should('contain', 'CREATE AN ACCOUNT').and('be.visible');
+    cy.get('[style="display:block"] > :nth-child(1) > .h-style').should('be.visible').and('contain', 'WELCOME BACK');
+    cy.get('#customer_login > .block-r > .btn').should('be.visible').and('contain', 'LOG IN').click();
+    cy.get('input:invalid').should('have.length', 3)
+    cy.get('#CustomerEmail').then(($input) => {
+      expect($input[0].validationMessage).to.eq('Please fill in this field.')
+    })
+  });
+
+  it.only('7.9 Try to login without @ ', () => {
+    cy.get('.js-mh__account-link').should('be.visible').click();
+    cy.get('.h-style.h-m.row.f-w500').should('contain', 'CREATE AN ACCOUNT').and('be.visible');
+    cy.get('[style="display:block"] > :nth-child(1) > .h-style').should('be.visible').and('contain', 'WELCOME BACK');
+    cy.wait(1000);
+    cy.get('#CustomerEmail').should('have.attr', 'placeholder', 'Email address').should('be.visible').and('be.enabled').type('Varde', { delay: 100 })
+    cy.get('#customer_login > .block-r > .btn').should('be.visible').and('contain', 'LOG IN').click();
+    cy.get('input:invalid').should('have.length', 3);
+    cy.get('#CustomerEmail').then(($input) => {
+      expect($input[0].validationMessage).to.eq("Please include an \'@\' in the email address. \'Varde\' is missing an \'@\'.");
+    });
+  });
 
 
 });
