@@ -40,7 +40,7 @@ describe('1. Home Page', () => {
   //   cy.get('.ter-toggle').should('be.visible').and('contain', 'EUR').click();
   //   cy.get('.ter-select-wrapper.tac.block-rel').should('be.visible');
   //   cy.get('.is-selected > .wbsk-ui-option-toggle__input').click({ force: true });
-    
+
   //   // cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
   //   // cy.get('.wbsk-ui-option-toggle__options-wrap.wbsk-ui-option-toggle__options-wrap--drop-at-mobile.bdr.bdr-grey.wbsk-ui-option-toggle__options-wrap--is-open').should('be.visible');
   //   cy.get(':nth-child(2) > .wbsk-ui-option-toggle__input').click({ force: true });
@@ -72,6 +72,7 @@ describe('1. Home Page', () => {
   it('1.7 Access to account', () => {
     cy.get('.js-mh__account-link').should('be.visible').click();
     cy.get('.h-style.h-m.row.f-w500').should('contain', 'CREATE AN ACCOUNT').and('be.visible');
+    cy.get('h1.h-style.h-l.f-w500.row').should('be.visible').and('contain', 'WELCOME BACK');
   });
 
   it('1.8 Cart button', () => {
