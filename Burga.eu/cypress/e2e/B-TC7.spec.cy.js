@@ -80,7 +80,7 @@ describe('7. User Account', () => {
     })
   });
 
-  it.only('7.9 Try to login without @ ', () => {
+  it('7.9 Try to login without @ ', () => {
     cy.get('.js-mh__account-link').should('be.visible').click();
     cy.get('.h-style.h-m.row.f-w500').should('contain', 'CREATE AN ACCOUNT').and('be.visible');
     cy.get('[style="display:block"] > :nth-child(1) > .h-style').should('be.visible').and('contain', 'WELCOME BACK');

@@ -4,22 +4,26 @@ Test website: https://eu.burga.com/
 
     1.1 Verify the home page loads successfully.
         1.1.1 Banner ads and blocks for different product categories are visible 
-    1.2 Confirm navigation menus are accessible.
+    1.2 Confirm menus are accessible.
         1.2.1 Navigation menu is visible and opens when clicked
-	1.2.2 Closes when pressed 'X'
+	    1.2.2 Closes when pressed 'X'
+ 	    1.2.3 Collections are visible
+   	    1.2.4 Product categories are visible
+    	1.2.5 Phone model and brand available to choose
     1.3 Search button is visible
         1.3.1 When pressed, opens a modal window for searching.
-	1.3.2 Should be visible search input
-	1.3.3 When text entered should be visible suggestions, products, all results
-	1.3.4 Should be search clear 
-	1.3.5 Should be close button
+	    1.3.2 Should be visible search input
+	    1.3.3 When text entered should be visible suggestions, products, all results
+	    1.3.4 Should be search clear 
+	    1.3.5 Should be close button
     1.4 Change the region is visible and accessible
         1.4.1 Pops up window to change region
-        1.4.2 Selection of region is visible and accessible
-        1.4.3 Visible buttons for posibility to change region or stay in already selected region
+        1.4.2 Visible buttons for posibility to change region or stay in already selected region 
+        1.4.3 Selection of region is visible and accessible
     1.5 Select brad and model to displaying search products information
         1.5.1 When pressed opens a modal window to search phone models.
         1.5.2 The list of brands and models is visible.
+	    1.5.3 When clicked on brand and model it is selected and selection is visible
     1.6 Notification of offers and discounts
         1.6.1 When pressed opens a modal window that shows latest offers.
     1.7 Access to account
@@ -28,9 +32,10 @@ Test website: https://eu.burga.com/
         1.8.1 When pressed opens a modal window that shows what is in the cart
     1.9 Does the main logo redirects to the home page when clicked
 
+
 2. Product Categories
 
-    2.1 Access various product categories:
+    2.1 Access various product categories and verify products are displayed under each category.:
         2.1.1 Phone Cases
         2.1.2 Ring Holders
         2.1.3 Earbuds Cases
@@ -42,40 +47,39 @@ Test website: https://eu.burga.com/
         2.1.9 Notebooks & Planners
         2.1.10 Eyewear
         2.1.11 Screen Protectors
-        2.1.12 Charging Accessories
-        2.1.13 Other Accessories
-    2.2 Verify products are displayed under each category.
-    2.3 Ensure product information is visible.
-        2.3.1 Title of product is visible
-        2.3.2 Which phone model the product is for is visible
-        2.3.3 Price is visible
-        2.3.4 Add to cart is visible
-    2.4 Check filtering and sorting options within categories.
-        2.4.1 Check if filtering is taking place according to the selected filtering criteria
+        2.1.12 Charging
+        2.1.13 Accessories
+    2.2 Ensure product information is visible (choose one of the categories to check).
+        2.2.1 Title of product is visible
+        2.2.2 Which phone model the product is for is visible
+        2.2.3 Price is visible
+        2.2.4 Add to cart is visible
+    2.3 Check filtering and sorting options within categories.
+        2.3.1 Check if filtering is taking place according to the selected filtering criteria.
 
 3. Product Details Page
 
     3.1 Ensure product images are displayed.
         3.1.1 Verify image of the selected item in the main part of the screen
-        3.1.2 Verify that you can change the images by selecting one of the other pictures of the same item
-        3.1.3 Check that you can change the images by selecting one of the other images of the same item from the radio buttons at the bottom of the photo. 
-    3.2 Verify product descriptions and specifications are visible.
-        3.2.1 Verify the type of product is visible and you can change it
-        3.2.2 Verify the price of product is visible
-        3.2.3 Verify that you can see which model the product is for
-        3.2.4 Verify that you can see Description
-        3.2.5 Verify that you can see FAQ
+        3.1.2 Verify that images selection on the left side of image is visible
+        3.1.3 Verify that images selection with radio buttons at the bottom of the photo is visible. 
+    	3.1.4 Verify product descriptions and specifications are visible.
+        3.1.5 Verify the type of product is visible and you can change it
+        3.1.6 Verify the price of product is visible
+        3.1.7 Verify that you can see which model the product is for
+    3.2 Verify that you can see Description
+        3.2.1 Verify that you can see FAQ
     3.3 Check availability 
         3.3.1 Verify that product can be added to cart
     3.4 Check customer reviews and ratings.
-        3.4.1 Verify that ustomer reviews and ratings are visible
+        3.4.1 Verify that customer reviews and ratings are visible
     3.5 Confirm the presence of an "Add to Cart" button.
 
 4. Search Functionality
 
     4.1 Test the search bar for products.
-    4.2 Verify search results are relevant.
-    4.3 Check for suggestions or autocomplete features.
+	    4.1.1 Check for suggestions or autocomplete features.
+    	4.1.2 Verify search results are relevant.
 
 5. Shopping Cart
 
@@ -87,22 +91,24 @@ Test website: https://eu.burga.com/
         5.3.1 Verify that product quantities in the cart has changed
     5.4 Remove products from the cart.
         5.4.1 Verify that product from the cart has been removed
-    5.5 Proceed to checkout.
+    5.5 Proceed to checkout, without signing in.
         5.5.1 When the Secure Checkout button is clicked, a redirection to another window is correct to proceed to checkout.
         5.5.2 Verify that the products in a cart is visible
         5.5.3 Verify that the price of the product is visible
         5.5.4 Check that the discount entry is visible and can be applied.
-        5.5.5 Verify that the delivery information entry form is visible and can be filled
-        5.5.6 Verify that the payment information form is visible and can be filled
-        5.5.7 Verify that whether the purchase can proceed if all fields are not filled in
+    5.6 If data is entered incorrectly, errors are displayed.
 
 6. Checkout Process
 
     6.1 Enter shipping information.
-    6.2 Select shipping methods.
-    6.3 Provide payment details.( klausimas kaip padaryti neatliekant tikro užsakymo)
-    6.4 Review and place the order.( klausimas kaip padaryti neatliekant tikro užsakymo)
-    6.5 Receive order confirmation.( klausimas kaip padaryti neatliekant tikro užsakymo)
+	    6.1.1 Verify if mail is entered incorrectly does an error message is displayed.
+	    6.1.2 Verify if postal code is entered incorrectly does an error message is displayed
+	    6.1.3 Verify if phone is entered incorrectly does an error message is displayed
+	    6.1.4 Verify if data is entered incorrectly, errors are displayed
+    6.2 Provide payment details.( klausimas kaip padaryti neatliekant tikro užsakymo)
+    6.3 Review and place the order.( klausimas kaip padaryti neatliekant tikro užsakymo)
+    6.4 Receive order confirmation.( klausimas kaip padaryti neatliekant tikro užsakymo)
+
 
 7. User Account
 
@@ -119,14 +125,17 @@ Test website: https://eu.burga.com/
         7.3.2 Enter information 
         7.3.3 Save information 
     7.4 Access order history.
-        7.4.1 Open Oreder history (should be empty, because 6.3/6.4/6.5)
+        7.4.1 Open Order history (should be empty, because 6.3/6.4/6.5)
     7.5 Manage saved addresses.
     7.6 Log out.
     7.7 Check that the password reminder works.
         7.7.1 Enter right email 
         7.7.2 Get a renewed password
+    7.8 Start getting a renewed password and cancel it
+    7.9 Try to login with no info.
 
-8. Customer Support
+
+8. Customer Support //can't test because of security of the page
 
     8.1 Access the Help Center.
         8.1.1 'Get more information' should be visible
@@ -142,18 +151,10 @@ Test website: https://eu.burga.com/
     8.4 Can i go to home page from help center just by pressing Burga main logo(left side)
    
 
-9. Meniu bar // ištestuota 1
+9. Footer Links
 
-    9.1 Is Meniu bar visible
-    9.2 Collections are visible
-    9.3 Product categories are visible
-    9.4 Phone model and brand available to choose
- 
-
-10. Footer Links
-
-    10.1 Navigate to and verify that "About Us" page and information is visible.
-    10.2 Navigate to and verify that"Blog" section page and information is visible.
-    10.3 Navigate to and verify that"Terms & Conditions" page and information is visible.
-    10.4 Navigate to and verify that"Privacy Policy" page and information is visible.
-    10.5 Navigate to and verify that"Partnerships and Collaborations" page and information is visible.
+    9.1 Navigate to and verify that "About Us" page and information is visible.
+    9.2 Navigate to and verify that"Blog" section page and information is visible.
+    9.3 Navigate to and verify that"Terms & Conditions" page and information is visible.
+    9.4 Navigate to and verify that"Privacy Policy" page and information is visible.
+    9.5 Navigate to and verify that"Partnerships and Collaborations" page and information is visible.

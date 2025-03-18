@@ -3,6 +3,9 @@
 describe('1. Home Page', () => {
   beforeEach(() => {
     cy.visit('https://eu.burga.com/');
+    cy.viewport(1640, 950)
+    cy.wait(10000);
+    // cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
   });
 
   it('1.1 Verify the home page loads successfully', () => {
@@ -10,10 +13,18 @@ describe('1. Home Page', () => {
     cy.get('.flex.col-wrap.align-bottom.justify-center.grid.grid--f').should('be.visible');
   });
 
-  it('1.2 Confirm navigation menus are accessible', () => {
+  it('1.2 Confirm menus are accessible', () => {
     cy.get('.js-global-sidebar-nav__toggle').should('be.visible').click();
     cy.get('#shopify-section-global__sidebar-nav').should('be.visible');
     cy.get('.modal-close.btn-reset.sidebar-nav__close.d-block.global-icon-button.global-icon-button--close.btn-reset').should('be.visible').click();
+    cy.get('.js-global-sidebar-nav__toggle').should('be.visible').click();
+    cy.get('#shopify-section-global__sidebar-nav').should('be.visible').and('contain', 'Collections');
+    cy.get('.bdr-b').should('be.visible').and('contain', 'Alice', 'Desire', 'Party');
+    cy.get('#shopify-section-global__sidebar-nav').should('be.visible').and('contain', 'Phone Cases', 'Custom Phone Cases', 'Earbuds Cases');
+    cy.get('.sidebar-nav__model-selector-wrap').should('be.visible').click();
+    cy.get('[data-item="iPhone 13 Mini"]').should('be.visible').click();
+    cy.get('.sidebar-nav__model-selector-wrap').should('be.visible').and('contain', 'iPhone 13 Mini');
+
   });
 
   it('1.3 Search button is visible', () => {
@@ -70,12 +81,16 @@ describe('1. Home Page', () => {
   });
 
   it('1.7 Access to account', () => {
+    // cy.viewport(1640, 950);
+    // cy.wait(10000);
     cy.get('.js-mh__account-link').should('be.visible').click();
     cy.get('.h-style.h-m.row.f-w500').should('contain', 'CREATE AN ACCOUNT').and('be.visible');
     cy.get('h1.h-style.h-l.f-w500.row').should('be.visible').and('contain', 'WELCOME BACK');
   });
 
   it('1.8 Cart button', () => {
+    // cy.viewport(1640, 950)
+    // cy.wait(5000);
     cy.get('.js-wbsk-sidebar-cart__open').should('be.visible').click();
     cy.get('.modal-sidebar').should('contain', 'Your Cart').and('be.visible');
   });
