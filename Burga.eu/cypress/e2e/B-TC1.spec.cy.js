@@ -5,7 +5,7 @@ describe('1. Home Page', () => {
     cy.visit('https://eu.burga.com/');
     cy.viewport(1640, 950)
     cy.wait(10000);
-    // cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
+    cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
   });
 
   it('1.1 Verify the home page loads successfully', () => {

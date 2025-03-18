@@ -1,45 +1,47 @@
 describe('2. Product Categories', () => {
     beforeEach(() => {
       cy.visit('https://eu.burga.com/');
-      cy.viewport(1640, 950)
+      cy.viewport(1640, 950);
+      cy.wait(10000);
+      cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
     });
     it('2.1 Access various product categories', () => {
       //Dėkliukai
       cy.get('.embla__container > [href="/collections/all"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Phone Cases').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       //Ring holderiai
       cy.get('.embla__container > [href="/collections/ring-holders"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Ring Holders').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       // ausinių dėklai
       cy.get('.embla__container > [href="/collections/airpods-3-cases"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'AirPods 3 Cases').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       // briksai
       cy.get('.embla__container > [href="/collections/magnetic-power-banks"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Magnetic Power Banks').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       //planšų dėklai
       cy.get('.embla__container > [href="/collections/ipad-cases"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'iPad Cases').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       // gertuvės
       cy.get('.embla__container > [href="/collections/travel-mugs"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Insulated Travel Mugs').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       //laptopų dėklai
       cy.get('.embla__container > [href="/collections/hard-macbook-cases"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Macbook Cases').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       // laikrodžių aksesuarai
       cy.get('.embla__container > [href="/collections/watch-bands"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Watch Bands').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       //notebooks
       cy.get('.embla__container > [href="/collections/notebooks"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Notebooks').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       // akiniai
       cy.get('.embla__container > [href="/pages/eyewear"]').should('be.visible').click();
       cy.get('.r-1c0teq4').should('be.visible');
@@ -48,18 +50,18 @@ describe('2. Product Categories', () => {
       //ekrano apsaugos
       cy.get('.embla__container > [href="/collections/screen-protectors"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Screen and Lens Protectors').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       //krovikliai
       cy.get('.embla__container > [href="/collections/charging"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Charging').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
       //aksesuarai
       cy.get('.embla__container > [href="/collections/accessories"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Accessories').and('be.visible');
-      cy.get('#shopify-section-template--22816476365134__products').should('be.visible').and('be.not.empty');
+      cy.get('#shopify-section-template--24699570880846__products').should('be.visible').and('be.not.empty');
     });
   
-    it.only('2.2 Ensure product information is visible (choose one of the categories to check)', () => {
+    it('2.2 Ensure product information is visible (choose one of the categories to check)', () => {
       cy.get('.embla__container > [href="/collections/all"]').should('be.visible').click();
       cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Phone Cases').and('be.visible');
       cy.get('[data-proudct-index="1"]').should('be.visible');

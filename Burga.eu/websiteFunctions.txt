@@ -154,7 +154,9 @@ Test website: https://eu.burga.com/
 9. Footer Links
 
     9.1 Navigate to and verify that "About Us" page and information is visible.
-    9.2 Navigate to and verify that"Blog" section page and information is visible.
-    9.3 Navigate to and verify that"Terms & Conditions" page and information is visible.
-    9.4 Navigate to and verify that"Privacy Policy" page and information is visible.
-    9.5 Navigate to and verify that"Partnerships and Collaborations" page and information is visible.
+    9.2 Navigate to and verify that "Blog" section page and information is visible.
+    9.3 Navigate to and verify that "Partnerships and Collaborations" page and information is visible.
+    9.4 Check if the redirect to Instagram works
+    9.5 Check if the redirect to Facebook works
+    9.6 Check if the redirect to TikTok works
+    9.7 Check if the redirect to YouTube works
