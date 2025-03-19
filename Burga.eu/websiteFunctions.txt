@@ -64,16 +64,17 @@ Test website: https://eu.burga.com/
         3.1.2 Verify that images selection on the left side of image is visible
         3.1.3 Verify that images selection with radio buttons at the bottom of the photo is visible. 
     	3.1.4 Verify product descriptions and specifications are visible.
-        3.1.5 Verify the type of product is visible and you can change it
-        3.1.6 Verify the price of product is visible
-        3.1.7 Verify that you can see which model the product is for
+        3.1.5 Verify the type of phone is visible and you can change it
+	3.1.6 Verify the type of product is visible and you can change it
+        3.1.7 Verify the price of product is visible
     3.2 Verify that you can see Description
-        3.2.1 Verify that you can see FAQ
-    3.3 Check availability 
-        3.3.1 Verify that product can be added to cart
-    3.4 Check customer reviews and ratings.
-        3.4.1 Verify that customer reviews and ratings are visible
-    3.5 Confirm the presence of an "Add to Cart" button.
+	    3.2.1 Verify that you can see Shipping
+        3.2.2 Verify that you can see FAQ
+    3.3 Add to cart button 
+	    3.3.1 Confirm the presence of an "Add to Cart" button.
+        3.3.2 Verify that product can be added to cart
+
+    
 
 4. Search Functionality
 
@@ -96,7 +97,7 @@ Test website: https://eu.burga.com/
         5.5.2 Verify that the products in a cart is visible
         5.5.3 Verify that the price of the product is visible
         5.5.4 Check that the discount entry is visible and can be applied.
-    5.6 If data is entered incorrectly, errors are displayed.
+   
 
 6. Checkout Process
 

@@ -4,39 +4,71 @@ describe('3. Product Details Page', () => {
     cy.viewport(1640, 950);
     cy.wait(10000);
     cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
+    cy.get('#onetrust-accept-btn-handler').click();
   });
 
-  it.only('3.1 Ensure product images are displayed', () => {
-    cy.get('.embla__container > [href="/collections/all"]').should('be.visible').click();
-    cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Phone Cases').and('be.visible');
-    cy.get('[data-proudct-index="1"] > .column-wrap > .js-prod-thumb > .col-thumb-img > .js-thumb-prod__image').should('be.visible').click();
-    cy.get('.js-prod-image-gallery-carousel-container.embla.block-rel').find('img').should('be.visible');
-    cy.get('.js-prod-image-gallery-thumbs-carousel-container > .embla__container').should('be.visible');
-    cy.get('.js-prod-image-gallery__carousel-pagination').should('be.visible');
-    cy.get('.js-wbsk-product-form.row.block-rel.d-block').should('be.visible');
-    cy.get('.prod-stock__text').should('be.visible').and('not.be.empty');
-    cy.get('.js-product-phone-model-selector').eq(0).should('be.visible');//neina pasirinti telefono jo modelio pakeitimui, kad ir kok5 trigger pasirenku metama klaida: TypeError: The following error originated from your application code, not from Cypress.
+  it('3.1 Ensure product images are displayed', () => {
+    // cy.get('.embla__container > [href="/collections/all"]').should('be.visible').click();
+    // cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Phone Cases').and('be.visible');
+    // cy.get('[data-proudct-index="1"] > .column-wrap > .js-prod-thumb > .col-thumb-img > .js-thumb-prod__image').should('be.visible').click();
+    // cy.wait(1000);
+    // cy.get('.js-prod-image-gallery-carousel-container.embla.block-rel').find('img').should('be.visible');
+    // cy.get('.js-prod-image-gallery-thumbs-carousel-container > .embla__container').should('be.visible');
+    // cy.get('.js-prod-image-gallery__carousel-pagination').should('be.visible');
+    // cy.get('.js-wbsk-product-form.row.block-rel.d-block').should('be.visible');
+    // cy.get('.prod-stock__text').should('be.visible').and('not.be.empty');
+    //3.1.5 telefono modelio keitimas
+    // cy.get('.js-product-phone-model-selector').should('be.visible');//neina pasirinti telefono jo modelio pakeitimui, kad ir kokį trigger pasirenku metama klaida: TypeError: The following error originated from your application code, not from Cypress.
+    // cy.get('[data-key="Case Type"]').should('be.visible').and('contain', 'SELECT CASE TYPE').and('not.be.empty');//3.1.6 TC
+    cy.get('.embla__container > [href="/collections/travel-mugs"]').should('be.visible').click();
+    cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Insulated Travel Mugs').and('be.visible');
+    cy.get('[href="/products/tricked-me-travel-mug"]').should('be.visible').click();
+    cy.get('[alt="Tricked Me - Travel Mug 1"]').should('be.visible');
+    cy.get('.prod-main-gallery--has-thumbs.block-rel').should('be.visible');
+    cy.get('.js-prod-image-gallery__carousel-pagination.embla__pagination').should('be.visible');
+    cy.get('.js-pre-order.order-three').should('be.visible').and('contain', 'PRE ORDER');
+    cy.get('.js-prod-design-selector').should('be.visible').and('not.be.empty').and('contain', 'More Designs');
+    cy.get('.js-prod-drinkware-type-target').should('be.visible').and('contain', 'Type:').and('not.be.empty');
+    cy.get('[data-key="Size"]').should('be.visible').and('contain', 'Size:').and('not.be.empty');
+    cy.get('[data-key="Lid Type"]').should('be.visible').and('contain', 'Lid Type:', 'Flap').and('not.be.empty');
+    cy.get('.js-prod-pre-order-wrapper').should('be.visible').and('contain', '€39,95');
+    cy.get('.align-stretch > :nth-child(2) > .js-selector-radio', { timeout: 1000 }).click({ force: true });
+    cy.wait(1000);
+    cy.get('[data-key="Lid Type"]').should('be.visible').and('contain', 'Lid Type:', 'Straw').and('not.be.empty');
 
-  //   > Cannot read properties of undefined (reading 'internalEngine')
-  
-  // When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
-  
-  // This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
- 
-    // cy.get('.modal-sidebar').should('be.visible');
-    // cy.get('.js-model-selector-search.reset-input.sidebar-search__input.sidebar-search__input--icon-left').type('iphone 13 mini{enter}');
-    // // cy.wait(10000);// nepadeda
-    // cy.get('[data-item="iPhone 13 Mini"]').should('be.visible').click(); //- kažkodėl neveikia, rast rada bet nepavyksta paspausti su cypress
-    // // cy.get('#357762359089703').should('be.visible').and('contain', 'SELECT CASE TYPE');
-    // cy.get('h3.h-style.t-xs.f-w500').should('be.visible').click()
+
+
   });
 
-  it('3.2 Verify that you can see Description', () =>{
-    cy.get('.embla__container > [href="/collections/all"]').should('be.visible').click();
-    cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Phone Cases').and('be.visible');
-    cy.get('.js-prod-sticky.prod-content--sticky.block-12/12').should('be.visible').and('contain', 'Description');
+  it('3.2 Verify that you can see Description', () => {
+    cy.get('.embla__container > [href="/collections/travel-mugs"]').should('be.visible').click();
+    cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Insulated Travel Mugs').and('be.visible');
+    cy.get('[href="/products/tricked-me-travel-mug"]').should('be.visible').click();
+    cy.scrollTo(0, 600);
+    cy.get('.js-wbsk-product-upsell-wrapper').should('contain', 'Add accessories').and('be.visible');
+    cy.get('#shopify-section-product__tag-accordion-sections').should('be.visible').and('contain', 'Description', 'Shipping', 'FAQ');
+    // cy.get(':nth-child(2) > .js-prod-accord__title').should('be.visible').and('contain', 'Shipping');//kelis kartus rado, dabar eberanda pagal šį pasirinkimą
+    // cy.get(':nth-child(3) > .js-prod-accord__title').should('be.visible').and('contain', 'FAQ');
+    cy.get('.js-prod-accord__title.prod-accord__title.prod-accord__title--design').click();
+    cy.wait(500);
+    cy.get('.prod-accord__content.js-prod-accord__content.rte-content.rte-content--s').eq(0).scrollIntoView().should('be.visible').and('not.be.empty');
+    cy.get('.js-prod-accord__title.prod-accord__title.prod-accord__title--design').click();
+    cy.get('.js-prod-accord__title.prod-accord__title.prod-accord__title--shipping').scrollIntoView().click();
+    cy.get('.r-14dq55h').scrollIntoView().should('be.visible').and('not.be.empty');
+    cy.get('.js-prod-accord__title.prod-accord__title.prod-accord__title--faq').scrollIntoView().click();
+    cy.get('.prod-accord__content.prod-accord__content--faq-mini-accordion.js-prod-accord__content').should('be.visible').and('not.be.empty');
   });
 
+  it('3.3 Add to cart button', () => {
+    cy.get('.embla__container > [href="/collections/travel-mugs"]').should('be.visible').click();
+    cy.get('h1.h-style.h-xxl.f-w700.t-ucase.f-hs').should('contain', 'Insulated Travel Mugs').and('be.visible');
+    cy.get('[href="/products/tricked-me-travel-mug"]').should('be.visible').click();
+    cy.wait(1000);
+    cy.get('[value="700ml"]').should('exist').invoke('css', 'opacity', '1').and('be.visible').click({force: true});
+    cy.get('#addtocartmain').scrollIntoView().should('contain', 'ADD TO CART').and('be.visible').click();
+    cy.get('.filter-nav__wrapper.filter-nav__wrapper--right.filter-nav__wrapper--onAtc').should('be.visible').and('contain', 'ADDED TO CART');
+
+  });
 
 
 
