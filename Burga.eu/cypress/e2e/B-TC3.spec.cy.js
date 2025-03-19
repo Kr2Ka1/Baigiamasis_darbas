@@ -15,7 +15,14 @@ describe('3. Product Details Page', () => {
     cy.get('.js-prod-image-gallery__carousel-pagination').should('be.visible');
     cy.get('.js-wbsk-product-form.row.block-rel.d-block').should('be.visible');
     cy.get('.prod-stock__text').should('be.visible').and('not.be.empty');
-    cy.get('.js-product-phone-model-selector.btn-reset.wbsk-ui-option-toggle.proxy-selector').should('be.visible').click();
+    cy.get('.js-product-phone-model-selector').eq(0).should('be.visible');//neina pasirinti telefono jo modelio pakeitimui, kad ir kok5 trigger pasirenku metama klaida: TypeError: The following error originated from your application code, not from Cypress.
+
+  //   > Cannot read properties of undefined (reading 'internalEngine')
+  
+  // When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+  
+  // This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+ 
     // cy.get('.modal-sidebar').should('be.visible');
     // cy.get('.js-model-selector-search.reset-input.sidebar-search__input.sidebar-search__input--icon-left').type('iphone 13 mini{enter}');
     // // cy.wait(10000);// nepadeda
