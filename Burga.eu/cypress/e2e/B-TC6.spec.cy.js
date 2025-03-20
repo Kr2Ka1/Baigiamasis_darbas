@@ -11,7 +11,7 @@ describe('6. Checkout Process', () => {
     cy.visit('https://eu.burga.com/');
     cy.viewport(1640, 950)
   });
-  it.only('6.5 Proceed to checkout, without signing in ', () => {
+  it('6.1 Proceed to checkout, without signing in ', () => {
     addProductsToCart();
     cy.get('.js-wbsk-sidebar-cart__open.mh__button.mh__button--cart').should('be.visible').click();
     cy.get('.modal-sidebar').should('be.visible');
@@ -41,7 +41,7 @@ describe('6. Checkout Process', () => {
     // cy.get('#expiry').eq(2).should('be.visible').type('1227');//irgi neranda
   });
 
-  it('5.6 If data is entered incorrectly, errors are displayed. ', () => {
+  it('6.2 If data is entered incorrectly, errors are displayed. ', () => {
     addProductsToCart();
     cy.get('.js-wbsk-sidebar-cart__open.mh__button.mh__button--cart').should('be.visible').click();
     cy.get('.modal-sidebar').should('be.visible');

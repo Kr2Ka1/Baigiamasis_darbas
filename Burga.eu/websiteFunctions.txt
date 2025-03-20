@@ -104,8 +104,8 @@ Test website: https://eu.burga.com/
     6.1 Enter shipping information.
 	    6.1.1 Verify if mail is entered incorrectly does an error message is displayed.
 	    6.1.2 Verify if postal code is entered incorrectly does an error message is displayed
-	    6.1.3 Verify if phone is entered incorrectly does an error message is displayed
-	    6.1.4 Verify if data is entered incorrectly, errors are displayed
+	6.2 Verify if phone is entered incorrectly does an error message is displayed
+	    6.2.1 Verify if data is entered incorrectly, errors are displayed
     6.2 Provide payment details.( klausimas kaip padaryti neatliekant tikro užsakymo)
     6.3 Review and place the order.( klausimas kaip padaryti neatliekant tikro užsakymo)
     6.4 Receive order confirmation.( klausimas kaip padaryti neatliekant tikro užsakymo)

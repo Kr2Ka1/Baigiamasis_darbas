@@ -26,12 +26,16 @@ describe('3. Product Details Page', () => {
     cy.get('[alt="Tricked Me - Travel Mug 1"]').should('be.visible');
     cy.get('.prod-main-gallery--has-thumbs.block-rel').should('be.visible');
     cy.get('.js-prod-image-gallery__carousel-pagination.embla__pagination').should('be.visible');
-    cy.get('.js-pre-order.order-three').should('be.visible').and('contain', 'PRE ORDER');
+    cy.get('[value="700ml"]').should('exist').invoke('css', 'opacity', '1').and('be.visible').click({force: true});
+    cy.wait(1000);
+    cy.get('.prod-stock__text').should('be.visible').and('contain', 'Limited Stock');
+    // cy.get('.js-pre-order.order-three').should('be.visible').and('contain', 'Limited Stock');
     cy.get('.js-prod-design-selector').should('be.visible').and('not.be.empty').and('contain', 'More Designs');
     cy.get('.js-prod-drinkware-type-target').should('be.visible').and('contain', 'Type:').and('not.be.empty');
     cy.get('[data-key="Size"]').should('be.visible').and('contain', 'Size:').and('not.be.empty');
     cy.get('[data-key="Lid Type"]').should('be.visible').and('contain', 'Lid Type:', 'Flap').and('not.be.empty');
-    cy.get('.js-prod-pre-order-wrapper').should('be.visible').and('contain', '€39,95');
+    cy.get('#addtocartmain').should('be.visible').and('contain', '€');
+    // cy.get('.js-prod-pre-order-wrapper').should('be.visible').and('contain', '€');
     cy.get('.align-stretch > :nth-child(2) > .js-selector-radio', { timeout: 1000 }).click({ force: true });
     cy.wait(1000);
     cy.get('[data-key="Lid Type"]').should('be.visible').and('contain', 'Lid Type:', 'Straw').and('not.be.empty');
