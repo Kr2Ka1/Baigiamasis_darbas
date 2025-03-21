@@ -82,7 +82,7 @@ test.describe('6. Checkout Process', () => {
   test('6.2 If data is entered incorrectly, errors are displayed.', async ({ page }) => {
     await addProductsToCart(page);
 
-    const cartButton = page.locator('.js-wbsk-sidebar-cart__open.mh__button.mh__button--cart');
+    const cartButton = page.locator('[aria-label="Open Cart"]');
     await expect(cartButton).toBeVisible();
     await cartButton.click();
 

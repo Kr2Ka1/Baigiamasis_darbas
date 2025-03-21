@@ -93,21 +93,22 @@ test('2.13 Access Accessories category', async ({ page }) => {
     await expect(page.locator('h1.h-style.h-xxl.f-w700.t-ucase.f-hs')).toContainText('Phone Cases');
     await expect(page.locator('[data-proudct-index="1"]')).toBeVisible();
     await expect(page.locator('[data-proudct-index="1"] > .column-wrap > .js-prod-thumb > div.cell-l--s > .h-style')).toBeVisible();
-    await expect(page.locator('[href="/products/alice-iphone-16-pro-max-case?_pos=1&_fid=bc51e0f3c&_ss=c&variant=51744888160590"]')).toBeVisible();
-    await expect(page.locator('.cell-l--s.cell-r--s.t-m.f-w500.flex.row-wrap.align-center.gap--d3')).toBeVisible();
-    await expect(page.locator('.btn-reset.col-thumb-btn.col-thumb-btn--atc')).toBeVisible();
-    await expect(page.locator('.btn-reset.wbsk-ui-option-toggle.proxy-selector.proxy-selector--filter-by.flex-grid--xxs')).toBeVisible();
+    await expect(page.locator('xpath=/html/body/main/section[3]/div/div/collection-product-grid-loader/div[1]/global-product-thumbnail/a/div[1]')).toBeVisible();
+    await expect(page.locator('xpath=/html/body/main/section[3]/div/div/collection-product-grid-loader/div[1]/global-product-thumbnail/a/div[2]/div')).toBeVisible();
+    await expect(page.locator('xpath=/html/body/main/section[3]/div/div/collection-product-grid-loader/div[1]/global-product-thumbnail/a/div[3]/global-product-thumb-form/form/button')).toBeVisible();
+    await expect(page.locator('xpath=/html/body/main/section[2]/collection-navigation-loader/div/collection-phone-navigation/collection-filters-ui-toggle/button')).toBeVisible();
 
-    const filterBtn = page.locator('.btn-reset.wbsk-ui-option-toggle.proxy-selector.proxy-selector--filter-by.flex-grid--xxs');
+    const filterBtn = page.locator('xpath=/html/body/main/section[2]/collection-navigation-loader/div/collection-phone-navigation/collection-filters-ui-toggle/button');
     await filterBtn.click();
-    await expect(page.locator('.modal-sidebar')).toBeVisible();
-    await expect(page.locator('.modal-sidebar')).toContainText('Filter by');
-    await expect(page.locator('.modal-sidebar')).toBeEmpty();
+    await expect(page.locator('xpath=/html/body/main/section[2]/collection-navigation-loader/collection-filters-ui-sidebar/global-sidebar/div/div[2]/form/div[1]/h2')).toBeVisible();
+    await expect(page.locator('xpath=/html/body/main/section[2]/collection-navigation-loader/collection-filters-ui-sidebar/global-sidebar/div/div[2]/form/div[1]/h2')).toContainText('Filter by');
+    
 
     const hearts = page.locator('[data-value="Hearts"]');
     await hearts.click();
     await page.click('#onetrust-accept-btn-handler');
     await page.click('.js-filter-nav__toggle.js-filter-nav__update.btn.btn--green');
-    await expect(page.locator('.wbsk-ui-option-toggle__option.is-selected')).toBeVisible();
+    await expect(page.locator('xpath=/html/body/main/section[2]/collection-navigation-loader/div/div[2]/collection-filters-sort-by/global-nice-selector/div[2]/div[2]')).toBeVisible();
+    
   });
 });

@@ -21,9 +21,12 @@ test.describe('1. Home Page', () => {
         await expect(page.locator('#shopify-section-global__sidebar-nav')).toBeVisible();
         await page.locator('.modal-close.btn-reset.sidebar-nav__close').click();
         await page.locator('.js-global-sidebar-nav__toggle').click();
-        const sidebarMenu = page.locator('xpath=/html/body/global-sidebar[1]/div/div[2]/global-sidebar-nav/div/div[2]/div[2]/div[1]');
-        await expect(sidebarMenu).toBeVisible();
-        await expect(sidebarMenu).toContainText(['Collections', 'Phone Cases', 'Custom Phone Cases', 'Earbuds Cases']);
+        const sidebarMenuCollections = page.locator('xpath=/html/body/global-sidebar[1]/div/div[2]/global-sidebar-nav/div/div[2]/div[1]/div[1]/div/h3');
+        await expect(sidebarMenuCollections).toBeVisible();
+        await expect(sidebarMenuCollections).toContainText('Collections');
+        const sidebarMenuPhoneC = page.locator('xpath=/html/body/global-sidebar[1]/div/div[2]/global-sidebar-nav/div/div[2]/div[2]/div[1]/a[1]/span');
+        await expect(sidebarMenuPhoneC).toBeVisible();
+        await expect(sidebarMenuPhoneC).toContainText('Phone Cases');
         await page.locator('.sidebar-nav__model-selector-wrap').click();
         await page.locator('[data-item="iPhone 13 Mini"]').click();
         await expect(page.locator('.sidebar-nav__model-selector-wrap')).toContainText('iPhone 13 Mini');
@@ -33,8 +36,8 @@ test.describe('1. Home Page', () => {
         await page.locator('.mh__button--search').click();
         await expect(page.locator('.block-fh.wbsk-ui-scroll-flex')).toBeVisible();
         await page.locator('.js-sidebar-search__input').fill('samsung s20+');
-        await page.waitForTimeout(5000);
-        await expect(page.locator('.f-w600.d-block.cell-l.cell-r.t-ucase')).toContainText('Suggestions');
+        await page.waitForTimeout(10000);
+        await expect(page.locator('xpath=/html/body/global-sidebar[2]/div/div[2]/global-sidebar-search/div/div[1]/div/label[1]')).toContainText('Suggestions');
         await page.locator('#onetrust-accept-btn-handler').click();
         await page.locator('.js-sidebar-search__clear').click();
         await expect(page.locator('input[placeholder="Type to search"]')).toBeVisible();

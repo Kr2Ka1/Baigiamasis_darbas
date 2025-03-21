@@ -112,7 +112,7 @@ test.describe('3. Product Details Page', () => {
     await addToCartBtn.click();
 
     // Verify the added to cart confirmation
-    const addedToCartMessage = page.locator('.filter-nav__wrapper.filter-nav__wrapper--right.filter-nav__wrapper--onAtc');
+    const addedToCartMessage = page.locator('xpath=/html/body/global-atc-modal/div/div/div/div[1]/h2');
     await expect(addedToCartMessage).toBeVisible();
     await expect(addedToCartMessage).toHaveText('ADDED TO CART');
   });
